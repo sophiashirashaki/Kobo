@@ -82,13 +82,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
-────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+──「 [Kobo Kanaeru](https://t.me/KoboKanaeru_Robot) 」──
+*Woi! {},*
+*✪ I'm V-tuber Theme group management bot*
+*✪ I've some features for you :)*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+• *Uptime:* `{}`
+• `{}` *users, across* `{}` *chats.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+➛ Find the list of available commands with /help ××
 """
 
 buttons = [
@@ -98,7 +100,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Get Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
+            text="Updates", switch_inline_query_current_chat=""
         ),
     ],
     [
