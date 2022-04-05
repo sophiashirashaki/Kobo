@@ -95,17 +95,16 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name}", callback_data="emiko_"),
+        InlineKeyboardButton(text="About Kobo", callback_data="Skyzu_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
-        InlineKeyboardButton(
-            text="Updates", switch_inline_query_current_chat=""
+        InlineKeyboardButton(text="Help & Commands❓, callback_data="help_back"),
+        InlineKeyboardButton(text="Update, url="https://t.me/projectsupdates"),
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+            text="➗ Add Kobo To Your Group ➗", url="t.me/KoboKanaeru_Robot?startgroup=new"),
     ],
 ]
 
@@ -231,9 +230,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            f"Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
             parse_mode=ParseMode.HTML
-       )
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Support​", url="t.me/AkoUpdate")]]
+            ),
+        )
 
 
 def error_handler(update, context):
@@ -437,14 +439,14 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
+            text="*๏ Kobo support chats*"
             f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton(text="Support", url="t.me/AkoUpdate"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/Projectsupdates"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
@@ -461,33 +463,17 @@ def emiko_about_callback(update, context):
             f"\nHere Developers Making And Give Inspiration For Made The {dispatcher.bot.first_name}",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
-                    InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Feri", url="https://github.com/FeriEXP"),
-                    InlineKeyboardButton(text="riz-ex", url="https://github.com/riz-ex"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
-                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
-                 ]
+                            [
+                    [
+                        InlineKeyboardButton(text="Ako", url="t.me/AkoHere"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
+                    ],
                 ]
             ),
         )
+                    
 
 def Source_about_callback(update, context):
     query = update.callback_query
@@ -500,10 +486,15 @@ def Source_about_callback(update, context):
             "\n • `/resume` - To resuming the playback You've paused."
             "\n • `/skip` - To skipping the player."
             "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
+            "\n • `/userbotjoin` - To add userbot to the group."
+            "\n • `/userbotleave` - To remove bots from the group."
+            "\n • `/mutemusic or /unmutemusic` - Toggle for turn ON or turn OFF the musicplayer."
             "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            "\n • `/mplay` <query or reply audio> - Playing music via YouTube."
+            "\n • `/vplay` <query or reply video> - Playing video via YouTube."
+            "\n • `/vstream` <link steram via YouTube> - Playing video stream via YouTube."
+            "\n • `/playlist` - To playing a playlist of groups or your personal playlist"
+            "\n\n [Video-Stream](https://github.com/levina-lab/video-stream) based music player (with some changes).",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
