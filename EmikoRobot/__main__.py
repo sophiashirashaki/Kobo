@@ -98,7 +98,7 @@ buttons = [
         InlineKeyboardButton(text="About Kobo", callback_data="Skyzu_"),
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❓, callback_data="help_back"),
+        InlineKeyboardButton(text="Help & Commands❓", callback_data="help_back"),
         InlineKeyboardButton(text="Update, url="https://t.me/projectsupdates"),
         ),
     ],
