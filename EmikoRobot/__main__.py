@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-──「 [Kobo Kanaeru](https://t.me/KoboKanaeru_Robot) 」──
+──「 [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) 」──
 *Woi! {},*
 *✪ I'm V-tuber Theme group management bot*
 *✪ I've some features for you :)*
@@ -95,7 +95,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Kobo", callback_data="Skyzu_"),
+        InlineKeyboardButton(text="About Kobo", callback_data="emiko_"),
     ],
     [
         InlineKeyboardButton(text="Help & Commands❓", callback_data="help_back"),
@@ -113,7 +113,7 @@ Click on the button bellow to get description about specifics command."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @excrybaby \
+ You can support the project by contacting @AkoHere \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
