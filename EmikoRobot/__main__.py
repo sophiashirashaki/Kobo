@@ -385,7 +385,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="Owner", url="https://t.me/Humaaancarees"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
@@ -465,6 +465,7 @@ def emiko_about_callback(update, context):
                             [
                     [
                         InlineKeyboardButton(text="Ako", url="t.me/AkoHere"),
+                        InlineKeyboardButton(text="Human", url="t.me/Humaaancarees"),
                     ],
                     [
                         InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
@@ -790,7 +791,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi, i'm alive.",
+                "Woy, Kobokan Aer Aktif cugg!!.",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
