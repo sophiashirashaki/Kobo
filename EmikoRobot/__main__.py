@@ -473,7 +473,7 @@ def emiko_about_callback(update, context):
                         InlineKeyboardButton(text="Human", url="t.me/Humaaancarees"),
                     ],
                     [
-                        InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
+                        InlineKeyboardButton(text="Go Back​", callback_data="emiko_"),
                     ],
                 ]
             ),
