@@ -109,7 +109,12 @@ buttons = [
 
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Kobokan commands available:
+ • /help: PM's you this message.
+ • /help <module name>: PM's you info about that module.
+ • /settings (in your group): Setting your group in PM.
+
+All commands can either be used with '/' or '!'"""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
