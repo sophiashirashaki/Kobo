@@ -84,11 +84,11 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 ──「 [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) 」──
 
-*Woi, {},*
-*✪ I'm V-tuber Theme group management bot*
-*✪ I've some features for you :)*
+*Woi, {}!*
+✪ I'm V-tuber Theme group management bot
+✪ I've some features for you :)
 
-➛ Find the list of available commands with /help ××
+*➛ Find the list of available commands with* /help ××
 """
 
 buttons = [
@@ -97,7 +97,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="About Kobo", callback_data="emiko_"),
-        InlineKeyboardButton(text="Update", url="https://t.me/projectsupdates"),
+        InlineKeyboardButton(text="Update ", url="https://t.me/projectsupdates"),
     ],
     [
         InlineKeyboardButton(
