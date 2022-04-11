@@ -18,9 +18,7 @@ from telegram.utils.helpers import mention_html
 REPORT_GROUP = 12
 REPORT_IMMUNE_USERS = DRAGONS + TIGERS + WOLVES
 
-@run_async
 @user_admin
-@typhing_action
 def report_setting(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     chat = update.effective_chat
