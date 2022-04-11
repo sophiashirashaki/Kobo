@@ -276,12 +276,10 @@ __help__ = """
 REPORT_HANDLER = CommandHandler("report", report, filters=Filters.group)
 SETTING_HANDLER = CommandHandler("reports", report_setting, pass_args=True)
 ADMIN_REPORT_HANDLER = MessageHandler(Filters.regex("(?i)@admin(s)?"), report)
-REPORT_BUTTON_HANDLER = CallbackQueryHandler(report_buttons, pattern=r"report_")
 
 dispatcher.add_handler(REPORT_HANDLER, REPORT_GROUP)
 dispatcher.add_handler(ADMIN_REPORT_HANDLER, REPORT_GROUP)
 dispatcher.add_handler(SETTING_HANDLER)
-dispatcher.add_handler(REPORT_BUTTON_HANDLER)
 
 
 __mod_name__ = "Reporting"
@@ -289,5 +287,4 @@ __handlers__ = [
     (REPORT_HANDLER, REPORT_GROUP),
     (ADMIN_REPORT_HANDLER, REPORT_GROUP),
     (SETTING_HANDLER),
-    (REPORT_BUTTON_HANDLER),
 ]
