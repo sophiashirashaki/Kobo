@@ -83,13 +83,11 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 ──「 [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) 」──
-*Woi! {},*
+
+*Woi, {},*
 *✪ I'm V-tuber Theme group management bot*
 *✪ I've some features for you :)*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-• *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
+
 ➛ Find the list of available commands with /help ××
 """
 
