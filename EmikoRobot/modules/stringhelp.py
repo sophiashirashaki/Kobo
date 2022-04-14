@@ -1,4 +1,4 @@
-__mod_name__ = "String Session"
+__mod_name__ = "String"
 
 __help__ = """
 ──「 String Session 」──              
