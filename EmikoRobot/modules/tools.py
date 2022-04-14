@@ -33,5 +33,6 @@ Link To File:
 ❂ /tgt: Get Telegraph Link of Replied Text
 
  Tagger
-❂ /tagall : for tag everyone at least 100 member first.
+❂ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
+❂ /cancel for canceling the mention-all.
 """
