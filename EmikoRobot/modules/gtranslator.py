@@ -39,6 +39,9 @@ vi,xh,yi,yo,zh,zh_CN,zh_TW,zu`
 __mod_name__ = "Translator"
 
 
+trans = Translator()
+
+
 @pbot.on_message(filters.command(["tl", "tr"]))
 async def translate(_, message: Message) -> None:
     reply_msg = message.reply_to_message
