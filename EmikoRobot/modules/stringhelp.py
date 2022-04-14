@@ -1,2 +1,2 @@
-mod_name:"String Session"
+__mod_name__ = "String Session"
 
