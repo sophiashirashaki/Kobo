@@ -5,8 +5,7 @@ __help__ = """
 Kobo can generate string for you!!
 
 🔥 Available Commands 🔥
-/help - This Message
+/help <module> - PM's you this message.
 /start - Start the Bot
 /generate - Start Generating Session
-/cancel - Cancel the process
 """
