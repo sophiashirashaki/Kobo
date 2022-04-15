@@ -381,14 +381,10 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="emiko_support"),
                     InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Owner", url="https://t.me/Humaaancarees"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
