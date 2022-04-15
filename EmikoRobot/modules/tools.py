@@ -30,9 +30,12 @@ Link To File:
 ❂ /tmpninja: reply to a telegram file to upload it on tmpninja and get direct download link
  File Or Text To Telegraph:
 ❂ /tgm : Get Telegraph Link Of Replied Media
-❂ /tgt: Get Telegraph Link of Replied Text
+❂ /tgt : Get Telegraph Link of Replied Text
 
  Tagger
 ❂ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
 ❂ /cancel for canceling the mention-all.
+
+ Covid
+❂ /covid or /corona : See covid statistics in various countries /covid : See covid statistics in various countries.
 """
