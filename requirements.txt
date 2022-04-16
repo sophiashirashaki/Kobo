@@ -18,6 +18,7 @@ ffmpeg-python
 spongemock
 zalgo-text
 geopy
+humanize
 nltk
 psutil
 aiohttp
