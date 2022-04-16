@@ -19,6 +19,7 @@ from pyrogram import Client, errors
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
 from ptbcontrib.postgres_persistence import PostgresPersistence
+from telegraph import Telegraph
 
 StartTime = time.time()
 
