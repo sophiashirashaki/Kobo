@@ -16,6 +16,7 @@ from telethon.sessions import StringSession
 from telethon.sessions import MemorySession
 from pyrogram.types import Message
 from pyrogram import Client, errors
+from redis import StrictRedis
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
 from ptbcontrib.postgres_persistence import PostgresPersistence
@@ -100,6 +101,7 @@ if ENV:
     DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    REDIS_URL = os.environ.get("REDIS_URL", None) # REDIS URL (From:- Heraku & Redis)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
@@ -177,6 +179,7 @@ else:
 
     DB_URL = Config._DATABASE_URL
     MONGO_DB_URI = Config.MONGO_DB_URI
+    REDIS_URL = Config.REDIS_URL
     ARQ_API_KEY = Config.ARQ_API_KEY
     ARQ_API_URL = Config.ARQ_API_URL
     DONATION_LINK = Config.DONATION_LINK
@@ -218,6 +221,25 @@ DRAGONS.add(2088106582)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1138045685)
 DEV_USERS.add(2088106582)
+
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("[INFO]: Connecting To Yūki • Data Center • Mumbai • Redis Database")
+
+except BaseException:
+
+    raise Exception("[INFO ERROR]: Your Yūki • Data Center • Mumbai • Redis Database Is Not Alive, Please Check Again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("[INFO]: Connection To The Yūki • Data Center • Mumbai • Redis Database Established Successfully!")
+
 
 if not SPAMWATCH_API:
     sw = None
