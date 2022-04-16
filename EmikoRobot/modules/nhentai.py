@@ -9,8 +9,8 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
                             )
 
-from Cutiepii_Robot import pgram, telegraph
-from Cutiepii_Robot.utils.errors import capture_err
+from EmikoRobot import pgram, telegraph
+from EmikoRobot.utils.errors import capture_err
 
 
 @pgram.on_message(~filters.me & filters.command('nhentai', prefixes='/'), group=8)
