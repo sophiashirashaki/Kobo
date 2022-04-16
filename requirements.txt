@@ -49,7 +49,7 @@ PyDictionary
 git+https://github.com/Sorrybabe/downloader
 youtube_search_python==1.4.9
 youtube_search
-lyrics_extractor
+lyricsgenius==3.0.1
 asyncio
 cloudscraper
 dateparser
