@@ -32,10 +32,10 @@ Link To File:
 ❂ /tgm : Get Telegraph Link Of Replied Media
 ❂ /tgt : Get Telegraph Link of Replied Text
 
- Tagger
+ Tagger:
 ❂ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
 ❂ /cancel for canceling the mention-all.
 
- Covid
-❂ /covid or /corona : See covid statistics in various countries /covid : See covid statistics in various countries.
+ *Covid*
+❂ /covid or /corona : See covid statistics in various countries.
 """
