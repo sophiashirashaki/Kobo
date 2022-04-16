@@ -7,11 +7,11 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
                             )
 
-from EmikoRobot
+from EmikoRobot.events import register
 from EmikoRobot.utils.errors import capture_err
 
 
-@register(pattern=("/alive"))
+@register(pattern=("/nhentai"))
 @capture_err
 async def nhentai(client, message):
     query = message.text.split(" ")[1]
