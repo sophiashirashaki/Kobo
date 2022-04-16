@@ -237,6 +237,14 @@ telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 dispatcher = updater.dispatcher
 print("[INFO]: INITIALIZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
+print("[INFO]: PYROGRAM CLIENT STARTING")
+session_name = TOKEN.split(":")[0]
+pgram = Client(
+    session_name,
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+)
 print("[INFO]: Telegraph Installing")
 telegraph = Telegraph()
 # ARQ Client
