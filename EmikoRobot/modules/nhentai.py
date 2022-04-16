@@ -1,3 +1,5 @@
+
+
 import requests
 
 from pyrogram import filters
@@ -7,11 +9,11 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
                             )
 
-from EmikoRobot.events import register
-from EmikoRobot.utils.errors import capture_err
+from Cutiepii_Robot import pgram, telegraph
+from Cutiepii_Robot.utils.errors import capture_err
 
 
-@register(pattern=("/nhentai"))
+@pgram.on_message(~filters.me & filters.command('nhentai', prefixes='/'), group=8)
 @capture_err
 async def nhentai(client, message):
     query = message.text.split(" ")[1]
