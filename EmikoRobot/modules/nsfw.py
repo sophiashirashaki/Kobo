@@ -768,8 +768,9 @@ __handlers__ = [
     DVA_HANDLER,
 ]
 
-"""
-__help__ = 
+__mod_name__ = "NSFW"
+
+__help__ = """
 *NSFW:*
 ❂ /addnsfw : Enable NSFW mode
 ❂ /rmnsfw : Disable NSFW mode
@@ -825,7 +826,7 @@ __help__ =
 ❂ /smug: Sends Random Smug GIFs.
 ❂ /baka: Sends Random Baka Shout GIFs.
 ❂ /dva: Sends Random D.VA source Images.
+
+[Nekos](https://github.com/Nekos-life/nekos.py) lewds module.
+💝 Thanks to [EverythingSuckz](https://t.me/EverythingSuckz) for NSFW filter.
 """
-
-
-__mod_name__ = "Nsfw​"
