@@ -829,4 +829,8 @@ __help__ = """
 
 [Nekos](https://github.com/Nekos-life/nekos.py) lewds module.
 💝 Thanks to [EverythingSuckz](https://t.me/EverythingSuckz) for NSFW filter.
+
+*Anti NSFW:*
+❂ /antinsfw on : Actived anti nsfw system.
+❂ /antinsfw off : Disabled anti nsfw system.
 """
