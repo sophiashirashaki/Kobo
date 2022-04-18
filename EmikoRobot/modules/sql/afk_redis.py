@@ -1,5 +1,3 @@
-
-
 from EmikoRobot import REDIS
 
 
