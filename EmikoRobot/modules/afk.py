@@ -49,20 +49,33 @@ def no_longer_afk(update, context):
 
     if not is_user_afk(user.id):  #Check if user is afk or not
         return
-    end_afk_time = get_readable_time((time.time() - float(x)))
-    REDIS.delete(f"afk_time_{user.id}")
-    if res := end_afk(user.id):
-        if message.new_chat_members:  # don't say message
+    end_afk_time = get_readable_time((time.time() - float(REDIS.get(f'afk_time_{user.id}'))))
+    REDIS.delete(f'afk_time_{user.id}')
+    res = end_afk(user.id)
+    if res:
+        if message.new_chat_members:  # dont say msg
             return
-        firstname = user.first_name
+        firstname = update.effective_user.first_name
         try:
-            message.reply_text(
-                f"<b>{firstname}</b> is back online!\n"
-                f"You were away for: <code>{end_afk_time}</code>",
-                parse_mode=ParseMode.HTML,
+            options = [
+                "{} Is wasting his time in the chat!",
+                "The Dead {} Came Back From His Grave!",
+                "Welcome back {}! I hope you bought pizza",
+                "Good to hear from you again {}",
+                "{} Good job waking up now get ready for your classes!",
+                "Hey {}! Why weren't you online for such a long time?",
+                "{} why did you came back?",
+                "{} Is now back online!",
+                "OwO, Welcome back {}",
+                "Welcome to hell again {}",
+                "Whats poppin {}?",
+            ]
+            chosen_option = random.choice(options)
+            update.effective_message.reply_text(
+                chosen_option.format(firstname),
             )
-        except BadRequest:
-            return    
+        except BaseException:
+            pass
             
 
 
@@ -123,7 +136,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} is Dead!\nLast Liveliness: {} Ago.".format(fst_name, since_afk)
+            res = "<b>{}</b> is Dead!\nLast Liveliness: {} Ago.".format(fst_name, since_afk)
         else:
             res = "{} is afk!\nReason: {}\nLast seen: {} Ago.".format(fst_name, reason, since_afk)
 
