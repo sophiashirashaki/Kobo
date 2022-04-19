@@ -36,7 +36,6 @@ async def _(hilih):
     except Exception:
         await hilih.reply("Something went wrong LOL...")
 
-
 # Copyright 2021 ©
 # Modul Create by https://t.me/xflicks | Github = https://github.com/FeriEXP
 # Yang remove cacat
