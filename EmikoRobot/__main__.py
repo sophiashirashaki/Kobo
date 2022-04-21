@@ -82,13 +82,11 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-──「 [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) 」──
+*Yo {}!*
+✪ I'm [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) an V-tuber Theme group management bot
+✪ I've some features for you
 
-*Woi, {}!*
-✪ I'm V-tuber Theme group management bot
-✪ I've some features for you :)
-
-*➛ Find the list of available commands with* /help ××
+*➛ Find the list of available commands with Help & Commands button below. ××*
 """
 
 buttons = [
@@ -108,6 +106,9 @@ buttons = [
 
 HELP_STRINGS = """
 Kobokan commands available:
+Main commands available:
+Bug Report to [support chat](https://t.me/AkoUpdate).
+
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
  • /settings (in your group): Setting your group in PM.
@@ -790,7 +791,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "Woy, Kobokan Aer Aktif cugg!!.",
+                "Yo, Kobo Kanaeru is available now!!",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
