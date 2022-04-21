@@ -83,8 +83,8 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Yo {}!*
-✪ I'm [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) an V-tuber Theme group management bot
-✪ I've some features for you
+✪ I'm [Kobo Kanaeru](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) an V-tuber Theme group management bot.
+✪ I've some features for you.
 
 *➛ Find the list of available commands with Help & Commands button below. ××*
 """
