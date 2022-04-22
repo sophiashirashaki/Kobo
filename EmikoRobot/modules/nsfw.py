@@ -831,6 +831,11 @@ __help__ = """
 💝 Thanks to [EverythingSuckz](https://t.me/EverythingSuckz) for NSFW filter.
 
 *Anti NSFW:*
-❂ /antinsfw on : Actived anti nsfw system.
-❂ /antinsfw off : Disabled anti nsfw system.
+❂ /antinsfw <on/off>: Turn This Module On/Off.
+❂ /nsfwscan: Manually Scan An Image/Sticker/Document.
+
+Turn on Anti-NSFW will make Kobo protect your groups from any NSFW content.
+This Anti-NSFW will delete all message even from admins it self.
+
+Modules by [Ako](https://t.me/erosei_1).
 """
