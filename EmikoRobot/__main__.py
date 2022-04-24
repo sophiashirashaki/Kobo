@@ -105,8 +105,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Kobokan commands available:
-Main commands available:
+[Kobokan](https://telegra.ph/file/05a1fdada665ccbc27971.jpg) commands available:
 Bug Report to [support chat](https://t.me/AkoUpdate).
 
  • /help: PM's you this message.
