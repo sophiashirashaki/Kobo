@@ -6,7 +6,7 @@ from telegram.ext.filters import Filters
 from EmikoRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
 
 from EmikoRobot.modules.helper_funcs.decorators import emikocmd, emikomsg
-from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
+from EmikoRobot.modules.helper_funcs.anonymous import user_admin, AdminPerms
 import EmikoRobot.modules.sql.antilinkedchannel_sql as sql
 
 
