@@ -1,4 +1,4 @@
-from telethon.tl.types import 
+from telethon.tl.types import *
 from EmikoRobot.events import register
 
 @register(pattern="^/owo ?(.*)")
