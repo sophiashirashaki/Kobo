@@ -558,7 +558,7 @@ Examples:
 ❂ /setbio This user is a wolf (reply to the user)
  
 *Overall Information about you:*
-❂ /info*:* get information about a user. 
+❂ /info or /whois*:* get information about a user. 
  
 *json Detailed info:*
 ❂ /json*:* Get Detailed info about any message.
