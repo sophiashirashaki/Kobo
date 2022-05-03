@@ -7,6 +7,7 @@ from PIL import Image
 from io import BytesIO
 from datetime import datetime
 import random
+from telegram import __version__ as telever
 from telethon import events, Button, custom, version
 from EmikoRobot.events import register
 from EmikoRobot import telethn as aasf
@@ -56,7 +57,7 @@ async def hmm(yes):
     pm_caption = "**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I,m Kobo Kanaeru  **\n\n"
     pm_caption += f"**⚪ My Uptime :** `{uptime}`\n\n"
     pm_caption += f"**⚪ Telethon Version :** `{version.__version__}`\n\n"
-    pm_caption += "**⚪ My Owner :** [Human](https://t.me/Humaaancarees)\n"
+    pm_caption += "**⚪ My Owner :** [Human](https://t.me/Humaaancarees)\n\n"
     pm_caption += "**⚪ My Developer:** [Ako](https://t.me/erosei_1)\n"
     BUTTON = [[Button.url("Help", "https://t.me/KoboKanaeru_Robot?start=help"), Button.url("Support", "https://t.me/AkoUpdate")]]
     on = await aasf.send_file(yes.chat_id, file=file1,caption=pm_caption, buttons=BUTTON)
