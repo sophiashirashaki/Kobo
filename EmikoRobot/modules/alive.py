@@ -54,7 +54,7 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    pm_caption = "**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I,m Kobo Kanaeru  **\n\n"
+    pm_caption = "**Yo, I,m Kobo Kanaeru!! **\n\n"
     pm_caption += f"**⚪ My Uptime :** `{uptime}`\n\n"
     pm_caption += f"**⚪ Telethon Version :** `{version.__version__}`\n\n"
     pm_caption += "**⚪ My Owner :** [Human](https://t.me/Humaaancarees)\n\n"
