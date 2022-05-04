@@ -159,7 +159,8 @@ def get_id(update: Update, context: CallbackContext):
 
             user = bot.get_chat(user_id)
             msg.reply_text(
-                f"{html.escape(user.first_name)}'s id is <code>{user.id}</code>.",
+                f"{html.escape(user.first_name)}'s id is <code>{user.id}</code>.\n"
+                f"This group's id is <code>{chat.id}</code>.",
                 parse_mode=ParseMode.HTML,
             )
 
