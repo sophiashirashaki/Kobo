@@ -21,6 +21,7 @@ AFK_REPLY_GROUP = 8
 
 @emikocmd(command="afk", group=AFK_GROUP)
 @emikomsg(Filters.regex("(?i)^brb"), friendly="afk", group=AFK_GROUP)
+@emikomsg(Filters.regex("(?i)^Sayonara"), friendly="afk", group=AFK_GROUP)
 def afk(update, _):
     message = update.effective_message
     args = message.text.split(None, 1)
@@ -152,6 +153,7 @@ def __gdpr__(user_id):
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
 AFK_REGEX_HANDLER = MessageHandler(Filters.regex("(?i)brb"), afk)
+AFK_REGEX_HANDLER = MessageHandler(Filters.regex("(?i)Sayonara"), afk)
 NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, no_longer_afk, run_async=True)
 AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, reply_afk, run_async=True)
 
