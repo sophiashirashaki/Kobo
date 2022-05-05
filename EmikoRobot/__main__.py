@@ -423,8 +423,8 @@ def emiko_about_callback(update, context):
                  [
                     InlineKeyboardButton(text="Credits", callback_data="emiko_notes"),
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
-                 ],
-                 [
+                 ]
+                ]
             ),
         )
 
