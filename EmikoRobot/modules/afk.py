@@ -67,7 +67,7 @@ def no_longer_afk(update, _):
         firstname = update.effective_user.first_name
         try:
             message.reply_text(
-                f"Welcome back <code>{firstname}</code>!\nYou were away for: <code>{end_afk_time}</code>\nReason: <code>{reason}</code>", parse_mode=ParseMode.HTML
+                f"Welcome back <code>{firstname}</code>!\nYou were away for: <code>{end_afk_time}</code>", parse_mode=ParseMode.HTML
             )
         except BadRequest:
             return
