@@ -366,25 +366,21 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text=f"๏ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
-            f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
+            text=f"*Hi again! My name's Kobo Kanaeru.*"
+            "\n\n*As You Know I'm An V-tuber Themed Group Management Bot.*"
+            "\n\nJoin [Updates Channel](https://t.me/projectsupdates) To Keep Yourself Updated About Kobo Kanaeru."
+            "\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the Global banning system which safeguards and helps your group from spammers."
+            "\n\nI Can Manage Your Groups Smoothly, With Some Special Features."
+            "\n\nYou Can Know More About Me By Clicking The Below Buttons.",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="Terms and Conditions", callback_data="emiko_admin"),
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="Developer", callback_data="emiko_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
@@ -409,30 +405,38 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            text=f"*｢ Terms and Conditions 」*"
+            f"\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
+            "\n\n✪ Watch your group, if someone spamming your group, you can use report feature from your Telegram Client."
+            "\n✪ Make sure antiflood is enabled, so nobody can Flood/Spam your group."
+            "\n✪ Do not spam commands, button, or anything in bot PM, else you will be *Gbanned*."
+            "\n✪ If you need to ask anything abouy this bot, Go @AkoUpdate."
+            "\n✪ If you asking nonsense in Support Chat, you will get Warned/Banned."
+            "\n✪ Sharing any files/videos others than about bot in Support Chat is prohibited."
+            "\n✪ Sharing NSFW in Support Chat,will reward you GBAN and reported to Telegram as well."
+            "\n\nFor any kind of help, related to this bot, Join @AkoUpdate."
+            "\n\n_Terms & Conditions will be changed anytime.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [
+                 [
+                    InlineKeyboardButton(text="Credits", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                 ],
+                 [
             ),
         )
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"<b>*Kobo Is A Powerful Bot For Managing Groups With Additional Features.*</b>"
+            f"\n\nFork of [SkyzuRobot](https://github.com/Skyzu/SkyzuRobot)."
+            f"\n\n_Kobo's licensed under the GNU General Public License v3.0_""
+            f"\n\nIf Any Question About Kobo Kanaeru, Let Us Know At @AkoUpdate.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_admin")]]
             ),
         )
     elif query.data == "emiko_support":
@@ -457,7 +461,7 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_credit":
         query.message.edit_text(
-            text=f"๏ Credis for {dispatcher.bot.first_name}\n"
+            text=f"๏ Developer for {dispatcher.bot.first_name}\n"
             f"\nHere Developers Making And Give Inspiration For Made The {dispatcher.bot.first_name}",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
