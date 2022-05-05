@@ -36,12 +36,12 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "13625080"
+         "value": ""
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "048d611a92991a7b5eb97c774467170c"
+         "value": ""
       },    
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
