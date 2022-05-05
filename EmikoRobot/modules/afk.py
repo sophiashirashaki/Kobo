@@ -147,5 +147,21 @@ def check_afk(update, _, user_id: int, fst_name: int, userc_id: int):
         update.effective_message.reply_text(res, parse_mode=ParseMode.HTML)
 
 
+
+def __user_info__(user_id):
+    is_afk = is_user_afk(user_id)
+    text = ""
+    if is_afk:
+        since_afk = get_readable_time((time.time() - float(REDIS.get(f'afk_time_{user_id}'))))
+        text = "This user is currently afk (away from keyboard)."
+        text += f"\nLast Seen: {since_afk} Ago."
+       
+    else:
+        text = "This user currently isn't afk (not away from keyboard)."
+    return text
+
+def __stats__():
+    return f"• {len(REDIS.keys())} Total Keys in Redis Database."
+
 def __gdpr__(user_id):
     end_afk(user_id)
