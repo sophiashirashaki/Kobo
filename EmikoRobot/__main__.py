@@ -432,7 +432,7 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text=f"<b>*Kobo Is A Powerful Bot For Managing Groups With Additional Features.*</b>"
             f"\n\nFork of [SkyzuRobot](https://github.com/Skyzu/SkyzuRobot)."
-            f"\n\n_Kobo's licensed under the GNU General Public License v3.0_""
+            f"\n\n_Kobo's licensed under the GNU General Public License v3.0_"
             f"\n\nIf Any Question About Kobo Kanaeru, Let Us Know At @AkoUpdate.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
