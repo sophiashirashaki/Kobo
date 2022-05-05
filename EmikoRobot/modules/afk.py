@@ -13,7 +13,7 @@ from EmikoRobot.modules.sql.afk_redis import (
     is_user_afk,
     start_afk,
 )
-from Natsunagi.modules.users import get_user_id
+from EmikoRobot.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
