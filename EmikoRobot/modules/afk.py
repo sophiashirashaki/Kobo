@@ -149,15 +149,3 @@ def check_afk(update, _, user_id: int, fst_name: int, userc_id: int):
 
 def __gdpr__(user_id):
     end_afk(user_id)
-
-
-AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
-AFK_REGEX_HANDLER = MessageHandler(Filters.regex("(?i)brb"), afk)
-AFK_REGEX_HANDLER = MessageHandler(Filters.regex("(?i)Sayonara"), afk)
-NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, no_longer_afk, run_async=True)
-AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, reply_afk, run_async=True)
-
-dispatcher.add_handler(AFK_HANDLER, AFK_GROUP)
-dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
-dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
-dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
