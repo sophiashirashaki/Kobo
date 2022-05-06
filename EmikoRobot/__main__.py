@@ -404,7 +404,9 @@ def emiko_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "emiko_admin":
+    def Source_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "emiko_admin":
         query.message.edit_text(
             text=f"*｢ Terms and Conditions 」*"
             f"\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
