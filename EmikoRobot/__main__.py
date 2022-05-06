@@ -408,17 +408,17 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*｢ Terms and Conditions 」*"
-            f"\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
-            f"\n\n✪ Watch your group, if someone spamming your group, you can use report feature from your Telegram Client."
-            f"\n✪ Make sure antiflood is enabled, so nobody can Flood/Spam your group."
-            f"\n✪ Do not spam commands, button, or anything in bot PM, else you will be *Gbanned*."
-            f"\n✪ If you need to ask anything abouy this bot, Go @AkoUpdate."
-            f"\n✪ If you asking nonsense in Support Chat, you will get Warned/Banned."
-            f"\n✪ Sharing any files/videos others than about bot in Support Chat is prohibited."
-            f"\n✪ Sharing NSFW in Support Chat,will reward you GBAN and reported to Telegram as well."
-            f"\n\nFor any kind of help, related to this bot, Join @AkoUpdate."
-            f"\n\n_Terms & Conditions will be changed anytime.",
+            text="*｢ Terms and Conditions 」*"
+            "\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
+            "\n\n✪ Watch your group, if someone spamming your group, you can use report feature from your Telegram Client."
+            "\n✪ Make sure antiflood is enabled, so nobody can Flood/Spam your group."
+            "\n✪ Do not spam commands, button, or anything in bot PM, else you will be *Gbanned*."
+            "\n✪ If you need to ask anything abouy this bot, Go @AkoUpdate."
+            "\n✪ If you asking nonsense in Support Chat, you will get Warned/Banned."
+            "\n✪ Sharing any files/videos others than about bot in Support Chat is prohibited."
+            "\n✪ Sharing NSFW in Support Chat,will reward you GBAN and reported to Telegram as well."
+            "\n\nFor any kind of help, related to this bot, Join @AkoUpdate."
+            "\n\n_Terms & Conditions will be changed anytime.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -435,7 +435,7 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text=f"<b>*Kobo Is A Powerful Bot For Managing Groups With Additional Features.*</b>"
             f"\n\nFork of [SkyzuRobot](https://github.com/Skyzu/SkyzuRobot)."
-            f"\n\n_Kobo's licensed under the GNU General Public License v3.0_"
+            f"\n\nKobo's licensed under the GNU (_General Public License v3.0_)"
             f"\n\nIf Any Question About Kobo Kanaeru, Let Us Know At @AkoUpdate.",
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
