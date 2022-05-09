@@ -129,7 +129,8 @@ async def alive_function(answers):
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/KoboKanaeru_Robot) | [UBOT](t.me/Humaaancarees)
+**Profiles:** [BOT](https://t.me/KoboKanaeru_Robot) | [UBOT](https://t.me/Humaaancarees) | [DEV](https://t.me/erosei_1)
+**Repo:** [Kobo-Robot](https://t.me/projectsupdates/26)
 """
     answers.append(
         InlineQueryResultArticle(
