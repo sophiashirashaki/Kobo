@@ -478,7 +478,7 @@ def makepack_internal(
                 "<b>Your Sticker Pack has been created!</b>"
                 "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
                 "\n\n<b>Send /stickers to find sticker pack.</b>",
-                reply_markup=keyboard,
+                reply_markup=edited_keyboard,
                 parse_mode=ParseMode.HTML,
             )
         return
