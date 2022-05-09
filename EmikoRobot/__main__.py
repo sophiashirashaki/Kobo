@@ -404,11 +404,9 @@ def emiko_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    def Source_about_callback(update, context):
-    query = update.callback_query
-    if query.data == "emiko_admin":
+    elif query.data == "emiko_admin":
         query.message.edit_text(
-            text="*｢ Terms and Conditions 」*"
+            text=f"*Terms and Conditions*"
             "\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
             "\n\n✪ Watch your group, if someone spamming your group, you can use report feature from your Telegram Client."
             "\n✪ Make sure antiflood is enabled, so nobody can Flood/Spam your group."
