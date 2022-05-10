@@ -8,7 +8,6 @@ from asyncio import sleep
 from git import Repo
 from pyrogram.types import Message
 from EmikoRobot.modules.helper_funcs.decorators  import emikocmd
-from pyrogram import Client, filters
 from os import system, execle, environ
 from EmikoRobot.modules.helper_funcs.decorators import sudo_users_only
 from git.exc import InvalidGitRepositoryError
@@ -53,7 +52,7 @@ def updater():
     return bool(changelog)
 
 
-@emikocmd(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
+@emikocmd(command="update", group=2)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
