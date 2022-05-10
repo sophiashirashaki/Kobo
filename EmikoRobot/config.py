@@ -61,6 +61,7 @@ class Config(object):
         "awoo"  # Get your API key from https://www.alphavantage.co/support/#api-key
     )
     TIME_API_KEY = "awoo"  # Get your API key from https://timezonedb.com/api
+    UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/sophiashirashaki/Kobo-Robot)
     WALL_API = (
         "awoo"  # For wallpapers, get one from https://wall.alphacoders.com/api.php
     )
