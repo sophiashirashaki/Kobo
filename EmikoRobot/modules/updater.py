@@ -7,7 +7,7 @@ from asyncio import sleep
 
 from git import Repo
 from pyrogram.types import Message
-from EmikoRobot.filters import command
+from EmikoRobot.modules.decorators import emikocmd
 from pyrogram import Client, filters
 from os import system, execle, environ
 from EmikoRobot.modules.decorators import sudo_users_only
@@ -53,7 +53,7 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
+@emikocmd(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
@@ -64,4 +64,4 @@ async def update_repo(_, message: Message):
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit("Bot is **up-to-date** with [main](https://github.com/sophiashirashaki/Kobo-Robot)", disable_web_page_preview=True)
+    await msg.edit("Bot is **up-to-date** with [main](https://github.com/sophiashirashaki/Kobo-Robot)\nNow this bot is alive now!!", disable_web_page_preview=True)
