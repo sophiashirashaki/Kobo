@@ -7,12 +7,12 @@ from asyncio import sleep
 
 from git import Repo
 from pyrogram.types import Message
-from driver.filters import command
+from EmikoRobot.filters import command
 from pyrogram import Client, filters
 from os import system, execle, environ
-from modules.decorators import sudo_users_only
+from EmikoRobot.modules.decorators import sudo_users_only
 from git.exc import InvalidGitRepositoryError
-from config import UPSTREAM_REPO, BOT_USERNAME
+from EmikoRobot.config import UPSTREAM_REPO, BOT_USERNAME
 
 
 def gen_chlog(repo, diff):
