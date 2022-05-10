@@ -7,7 +7,7 @@ from asyncio import sleep
 
 from git import Repo
 from pyrogram.types import Message
-from EmikoRobot.modules.helper_funcs.decorators  import emikocmd
+from EmikoRobot.modules.helper_funcs.decorators import emikocmd
 from os import system, execle, environ
 EmikoRobot.modules.helper_funcs.chat_status import dev_plus
 from git.exc import InvalidGitRepositoryError
