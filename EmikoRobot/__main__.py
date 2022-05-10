@@ -235,7 +235,12 @@ def start(update: Update, context: CallbackContext):
             f"Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support​", url="t.me/AkoUpdate")]]
+                [
+                 [
+                    InlineKeyboardButton(text="Support", url="https://t.me/AkoUpdate"),
+                    InlineKeyboardButton(text="Update", url="https://t.me/projectsupdates"),
+                 ]
+                ]             
             ),
         )
 
