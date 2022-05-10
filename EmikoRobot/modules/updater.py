@@ -11,7 +11,7 @@ from EmikoRobot.modules.helper_funcs.decorators  import emikocmd
 from os import system, execle, environ
 EmikoRobot.modules.helper_funcs.chat_status import dev_plus
 from git.exc import InvalidGitRepositoryError
-from EmikoRobot.config import UPSTREAM_REPO, BOT_USERNAME
+from EmikoRobot.config import UPSTREAM_REPO
 
 
 def gen_chlog(repo, diff):
