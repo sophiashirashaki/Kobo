@@ -9,7 +9,7 @@ from git import Repo
 from pyrogram.types import Message
 from EmikoRobot.modules.helper_funcs.decorators  import emikocmd
 from os import system, execle, environ
-from EmikoRobot.modules.helper_funcs.decorators import sudo_users_only
+EmikoRobot.modules.helper_funcs.chat_status import dev_plus
 from git.exc import InvalidGitRepositoryError
 from EmikoRobot.config import UPSTREAM_REPO, BOT_USERNAME
 
@@ -53,7 +53,7 @@ def updater():
 
 
 @emikocmd(command="update", group=2)
-@sudo_users_only
+@dev_plus
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
     msg = await message.reply("🔄 `Processing Update...`")
