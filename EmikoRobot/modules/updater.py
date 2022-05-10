@@ -7,10 +7,10 @@ from asyncio import sleep
 
 from git import Repo
 from pyrogram.types import Message
-from EmikoRobot.modules.decorators import emikocmd
+from EmikoRobot.modules.helper_funcs.decorators  import emikocmd
 from pyrogram import Client, filters
 from os import system, execle, environ
-from EmikoRobot.modules.decorators import sudo_users_only
+from EmikoRobot.modules.helper_funcs.decorators import sudo_users_only
 from git.exc import InvalidGitRepositoryError
 from EmikoRobot.config import UPSTREAM_REPO, BOT_USERNAME
 
