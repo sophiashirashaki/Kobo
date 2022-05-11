@@ -46,7 +46,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2094658662"
+         "value": "2088106582"
      },
 
       "STRING_SESSION": {
@@ -64,22 +64,22 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "KoboKanaeru_Robot"
+         "value": "emiexrobot"
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": "5288199547"
+         "value": ""
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "Humaaancarees"
+         "value": "excrybaby"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "AkoUpdate"
+         "value": "emikosupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -107,7 +107,7 @@
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
          "required": true,
-         "value": "V7NS1NBFEL4X24L6"
+         "value": "-xyz"
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
@@ -129,7 +129,7 @@
       "ERROR_LOG": {
          "description": "ID of log for show error.",
          "required": false,
-         "value": "-1001626554919"
+         "value": ""
      },
         "ARQ_API_KEY": {
             "description": "Get this from @ARQRobot.",
@@ -139,7 +139,7 @@
       "SPAMWATCH_API": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": "oFvfXPqqs4gezIUiB3oNNVfcOHf4ZqgtFHeabSU0Rx43R_Rj~nQQlNGmPiQwXvG5"
+         "value": ""
       }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
@@ -205,7 +205,7 @@
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
-         "value": "False"
+         "value": "True"
       },
       "WALL_API": {
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
