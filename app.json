@@ -70,9 +70,9 @@
       "value": "Anomaliii"
     },
     "SUPPORT_CHAT": {
-      "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to zeldris support than consider you made an enemy.",
+      "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Kobo support than consider you made an enemy.",
       "required": true,
-      "value": "IDNCoderX"
+      "value": "AkoUpdate"
     },
     "MESSAGE_DUMP": {
       "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -80,17 +80,17 @@
       "value": "-1001599383497"
     },
     "DEV_USERS": {
-      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Zeldris Support then keep the current ID's here at they are and add yours.",
+      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Kobo Support then keep the current ID's here at they are and add yours.",
       "required": false,
       "value": ""
     },
     "SUPPORT_USERS": {
-      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Zeldris Support then keep the current ID's here at they are and add yours.",
+      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Kobo Support then keep the current ID's here at they are and add yours.",
       "required": false,
       "value": ""
     },
     "WHITELIST_USERS": {
-      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Zeldris Support then keep the current ID's here at they are and add yours.",
+      "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Kobo Support then keep the current ID's here at they are and add yours.",
       "required": false,
       "value": ""
     },
@@ -144,11 +144,11 @@
     "DONATION_LINK": {
       "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
       "required": false,
-      "value": "https://t.me/IDNCoderX"
+      "value": "https://t.me/projectsupdates"
     },
     "DEL_CMDS": {
       "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
-      "value": "True"
+      "value": "False"
     },
     "BAN_STICKER": {
       "description": "ID of the sticker you want to use when banning people.",
@@ -170,17 +170,17 @@
       "required": true,
       "value": ""
     },
-    "MONGO_DB": {
-      "description": "Your mongodb name",
+    "MONGO_DB_URI": {
+      "description": "Your mongodb url",
       "required": true,
-      "value": "Zeldris"
+      "value": ""
     },
-    "MONGO_PORT": {
-      "description": "Your mongodb port, better don't touch it",
+    "BOT_ID": {
+      "description": "Your id bot",
       "required": true,
       "value": "27017"
     },
-    "MONGO_URI": {
+    "BOT_USERNAME": {
       "description": "Your mongodb url",
       "required": true,
       "value": ""
