@@ -10,16 +10,13 @@ from EmikoRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
 from EmikoRobot.__main__ import DATA_IMPORT
 from EmikoRobot.modules.helper_funcs.chat_status import user_admin
 from EmikoRobot.modules.helper_funcs.alternate import typing_action
-
-# from EmikoRobot.modules.rules import get_rules
+from EmikoRobot.modules.rules import get_rules
 import EmikoRobot.modules.sql.rules_sql as rulessql
-
-# from EmikoRobot.modules.sql import warns_sql as warnssql
+from EmikoRobot.modules.sql import warns_sql as warnssql
 import EmikoRobot.modules.sql.blacklist_sql as blacklistsql
 from EmikoRobot.modules.sql import disable_sql as disabledsql
-
-# from EmikoRobot.modules.sql import cust_filters_sql as filtersql
-# import EmikoRobot.modules.sql.welcome_sql as welcsql
+from EmikoRobot.modules.sql import cust_filters_sql as filtersql
+import EmikoRobot.modules.sql.welcome_sql as welcsql
 import EmikoRobot.modules.sql.locks_sql as locksql
 from EmikoRobot.modules.connection import connected
 
@@ -330,7 +327,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("SaitamaRobot{}.backup".format(chat_id), "w") as f:
+    with open("KoboKanaeru{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -348,8 +345,8 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("SaitamaRobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `SaitamaRobot-Backup` was specially made for notes.".format(
+        document=open("KoboKanaeru{}.backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `KoboKanaeru-Backup` was specially made for notes.".format(
             chat.title,
             chat_id,
             tgl,
@@ -358,7 +355,7 @@ def export_data(update, context):
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("SaitamaRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("KoboKanaeru{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data
