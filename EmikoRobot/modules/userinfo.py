@@ -453,9 +453,16 @@ def stats(update: Update, context: CallbackContext):
         result,
         parse_mode=ParseMode.HTML, 
         disable_web_page_preview=True
-   )
-        
-        
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="System Stats 🖥", callback_data="stats_callback")]]
+            ),
+        )     
+@app.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+
+
+
 def about_bio(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
