@@ -346,6 +346,19 @@ __help__ = """
 ❂ /blue <text>: bluify your text!
 ❂ /latin <text>: latinify your text!
 ❂ /lined <text>: lined your text!
+
+- Waifu
+➢ /waifu: it will come random waifus (admins/non-admins)
+➢ /protecc: protecc the random waifus (admins/non-admins)
+➢ /harem: check your harem if you have luck (admins/non-admins
+
+- How-All 
+❂ /horny - Check Your Current Horney's 
+❂ /gay - Check Your Current Gayness 
+❂ /lezbian - Check Your Current Lesbians' 
+❂ /boobs - Check Your Current Boobs Size 
+❂ /cock - Check Your Current Cock Size 
+❂ /cute - Check Your Current Cuteness
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
