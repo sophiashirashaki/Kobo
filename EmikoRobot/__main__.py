@@ -801,9 +801,18 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "Yo, Kobo Kanaeru is available now!!",
+                "Yo, [Kobo Kanaeru](https://telegra.ph/file/fccf074e6d1b333c635e8.jpg) is available now!!",
                 parse_mode=ParseMode.MARKDOWN
-            )
+            reply_markup=InlineKeyboardMarkup(
+                [
+                  [                  
+                       InlineKeyboardButton(
+                             text="[► Start ◄]",
+                             url="https://t.me/KoboKanaeru_Robot?start")
+                     ] 
+                ]
+            ),
+        )
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
