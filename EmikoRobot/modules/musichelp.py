@@ -11,7 +11,7 @@ __help__ = """
 • `/end` - For end the playback.
 • `/userbotjoin` - To add @KoboAssistant to the group.
 • `/userbotleave` - To remove bots from the group.
-• `/mutemusic or /unmutemusic` - Toggle for turn ON or turn OFF the musicplayer.
+• `/mmute or /munmute` - To mute or unmute Assistant Music in vcg.
 
 *Command for all members.*
 • `/mplay` <query or reply audio> - Playing music via YouTube.
