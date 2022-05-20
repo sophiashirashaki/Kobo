@@ -9,13 +9,13 @@ from EmikoRobot.events import register
 
 
 edit_time = 5
-""" =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/11cfb0be7163d32c51259.jpg"
-file2 = "https://telegra.ph/file/444028d9b3daccc947a2d.jpg"
-file3 = "https://telegra.ph/file/fdf47498b208bc63000b4.jpg"
-file4 = "https://telegra.ph/file/e8f3310b943b8b8699dcd.jpg"
-file5 = "https://telegra.ph/file/401cb7f6216764ebab161.jpg"
-""" =======================CONSTANTS====================== """
+""" =======================Kobo Kanaeru====================== """
+file1 = "https://telegra.ph/file/fccf074e6d1b333c635e8.jpg"
+file2 = "https://telegra.ph/file/79c74ae56bb5a59511727.jpg"
+file3 = "https://telegra.ph/file/958b115b91dc56437de7f.jpg"
+file4 = "https://telegra.ph/file/7bcc93bff54ec80184d59.jpg"
+file5 = "https://telegra.ph/file/ce349a523b465ebcc0e43.jpg"
+""" =======================Kobo Kanaeru====================== """
 
 @register(pattern="/myinfo")
 async def proboyx(event):
@@ -23,7 +23,7 @@ async def proboyx(event):
     current_time = datetime.utcnow()
     betsy = event.sender.first_name
     button = [[custom.Button.inline("Click Here",data="information")]]
-    on = await bot.send_file(event.chat_id, file=file2,caption= f"♡ Hey {betsy}, I'm Cutiepii\n♡ I'm Created By [Black Knights Union](https://t.me/Black_Knights_Union_Support)\n♡ Click The Button Below To Get Your Info", buttons=button)
+    on = await bot.send_file(event.chat_id, file=file2,caption= f"♡ Hey {betsy}, I'm Kobo Kanaeru\n♡ I'm Created By Ako & Human\n♡ Click The Button Below To Get Your Info", buttons=button)
 
     await asyncio.sleep(edit_time)
     ok = await bot.edit_message(event.chat_id, on, file=file3, buttons=button) 
