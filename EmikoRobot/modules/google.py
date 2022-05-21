@@ -97,115 +97,116 @@ async def okgoogle(img):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 
-    message = await img.get_reply_message()
-    if message and message.media:
-        photo = io.BytesIO()
-        await tbot.download_media(message, photo)
+opener = urllib.request.build_opener()
+useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.68"
+opener.addheaders = [("User-agent", useragent)]
+
+
+async def reverse(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    chat_id = update.effective_chat.id
+    rtmid = msg.message_id
+    imagename = "googlereverse.png"
+
+    if os.path.isfile(imagename):
+        os.remove(imagename)
+
+    if reply := msg.reply_to_message:
+        if reply.sticker:
+            file_id = reply.sticker.file_id
+        elif reply.photo:
+            file_id = reply.photo[-1].file_id
+        elif reply.document:
+            file_id = reply.document.file_id
+        else:
+             await msg.reply_text("Reply To An Image Or Sticker To Lookup!")
+             return
+
+        image_file = await context.bot.get_file(file_id)
+        image_file.download(imagename)
     else:
-        await img.reply("`Reply to photo or sticker nigger.`")
+        await msg.reply_text(
+            "Please Reply To A Sticker, Or An Image To Search It!", parse_mode=ParseMode.MARKDOWN,
+        )
         return
 
-    if photo:
-        dev = await img.reply("`Processing...`")
-        try:
-            image = Image.open(photo)
-        except OSError:
-            await dev.edit("`Unsupported sexuality, most likely.`")
-            return
-        name = "okgoogle.png"
-        image.save(name, "PNG")
-        image.close()
-        # https://stackoverflow.com/questions/23270175/google-reverse-image-search-using-post-request#28792943
+    MsG = await context.bot.send_message(chat_id,
+                                   "Let Me See...",
+                                   reply_to_message_id=rtmid,
+    )
+    try:
         searchUrl = "https://www.google.com/searchbyimage/upload"
-        multipart = {"encoded_image": (name, open(name, "rb")), "image_content": ""}
+        multipart = {
+            "encoded_image": (imagename, open(imagename, "rb")),
+            "image_content": "",
+        }
         response = requests.post(searchUrl, files=multipart, allow_redirects=False)
-        fetchUrl = response.headers["Location"]
+        fetchUrl = response.headers.get("Location")
 
+        os.remove(imagename)
         if response != 400:
-            await dev.edit(
-                "`Image successfully uploaded to Google. Maybe.`"
-                "\n`Parsing source now. Maybe.`"
-            )
+            MsG.edit_text("Downloading...")
         else:
-            await dev.edit("`Google told me to fuck off.`")
+            MsG.edit_text("Google Told Me To Go Away...")
             return
 
-        os.remove(name)
-        match = await ParseSauce(fetchUrl + "&preferences?hl=en&fg=1#languages")
-        guess = match["best_guess"]
-        imgspage = match["similar_images"]
-
-        if guess and imgspage:
-            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...`")
+        match = ParseSauce(f"{fetchUrl}&hl=en")
+        guess = match.get("best_guess")
+        MsG.edit_text("Uploading...")
+        if match.get("override") and (
+            match.get("override") != "" or match.get("override") is not None
+        ):
+            imgspage = match.get("override")
         else:
-            await dev.edit("`Can't find this piece of shit.`")
+            imgspage = match.get("similar_images")
+
+        buttuns = []
+        if guess:
+            MsG.edit_text("Hmmm....")
+            search_result = guess.replace("Possible related search: ", "")
+            buttuns.append([InlineKeyboardButton(text="Images Link", url=fetchUrl)])
+        else:
+            MsG.edit_text("Couldn't Find Anything!")
             return
 
-        if img.pattern_match.group(1):
-            lim = img.pattern_match.group(1)
-        else:
-            lim = 3
-        images = await scam(match, lim)
-        yeet = []
-        for i in images:
-            k = requests.get(i)
-            yeet.append(k.content)
-        try:
-            await tbot.send_file(
-                entity=await tbot.get_input_entity(img.chat_id),
-                file=yeet,
-                reply_to=img,
-            )
-        except TypeError:
-            pass
-        await dev.edit(
-            f"[{guess}]({fetchUrl})\n\n[Visually similar images]({imgspage})"
+        if imgspage:
+            buttuns.append([InlineKeyboardButton(text="Similar Images", url=imgspage)])
+
+        MsG.edit_text("*Search Results*: \n\n`{}`".format(search_result),
+                      parse_mode=ParseMode.MARKDOWN,
+                      reply_markup=InlineKeyboardMarkup(buttuns),
         )
 
+    except BadRequest as Bdr:
+        MsG.edit_text(f"ERROR! - _Couldn't Find Anything!!_ \n\n*Reason*: BadRequest!\n\n{Bdr}", parse_mode=ParseMode.MARKDOWN)
+    except TelegramError as Tge:
+        MsG.edit_text(f"ERROR! - _Couldn't Find Anything!!_ \n\n*Reason*: TelegramError!\n\n{Tge}", parse_mode=ParseMode.MARKDOWN)
+    except Exception as Exp:
+        MsG.edit_text(f"ERROR! - _Couldn't Find Anything!!_ \n\n*Reason*: Exception!\n\n{Exp}", parse_mode=ParseMode.MARKDOWN)
 
-async def ParseSauce(googleurl):
-    """Parse/Scrape the HTML code for the info we want."""
 
+def ParseSauce(googleurl):
     source = opener.open(googleurl).read()
     soup = BeautifulSoup(source, "html.parser")
 
-    results = {"similar_images": "", "best_guess": ""}
+    results = {"similar_images": "", "override": "", "best_guess": ""}
 
     try:
-        for similar_image in soup.findAll("input", {"class": "gLFyf"}):
-            url = "https://www.google.com/search?tbm=isch&q=" + urllib.parse.quote_plus(
-                similar_image.get("value")
-            )
-            results["similar_images"] = url
-    except BaseException:
+        for bess in soup.findAll("a", {"class": "PBorbe"}):
+             url = "https://www.google.com" + bess.get("href")
+             results["override"] = url
+    except:
         pass
 
+    for similar_image in soup.findAll("input", {"class": "gLFyf"}):
+         url = "https://www.google.com/search?tbm=isch&q=" + urllib.parse.quote_plus(similar_image.get("value"))
+         results["similar_images"] = url
+
     for best_guess in soup.findAll("div", attrs={"class": "r5a77d"}):
-        results["best_guess"] = best_guess.get_text()
+         results["best_guess"] = best_guess.get_text()
 
     return results
-
-
-async def scam(results, lim):
-
-    single = opener.open(results["similar_images"]).read()
-    decoded = single.decode("utf-8")
-
-    imglinks = []
-    counter = 0
-
-    pattern = r"^,\[\"(.*[.png|.jpg|.jpeg])\",[0-9]+,[0-9]+\]$"
-    oboi = re.findall(pattern, decoded, re.I | re.M)
-
-    for imglink in oboi:
-        counter += 1
-        if counter < int(lim):
-            imglinks.append(imglink)
-        else:
-            break
-
-    return imglinks
-
+   
 
 @register(pattern="^/app (.*)")
 async def apk(e):
