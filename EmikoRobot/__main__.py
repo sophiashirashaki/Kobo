@@ -328,8 +328,8 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                        InlineKeyboardButton(text="Credits", callback_data="emiko_notes"),
-                        InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                        InlineKeyboardButton(text="Go Back", callback_data="help_back"),
+                        InlineKeyboardButton(text="Support", url="t.me/akoupdate"),
                      ]
                     ]
                ),
