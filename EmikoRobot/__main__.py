@@ -326,9 +326,14 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
-                ),
-            )
+                    [
+                     [
+                        InlineKeyboardButton(text="Credits", callback_data="emiko_notes"),
+                        InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                     ]
+                    ]
+               ),
+           )
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
