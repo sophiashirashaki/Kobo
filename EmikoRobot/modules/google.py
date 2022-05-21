@@ -8,8 +8,12 @@ import aiohttp
 import urllib.request
 from urllib.parse import urlencode
 import requests
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import CallbackContext
+from telegram.error import BadRequest, TelegramError
 from bs4 import BeautifulSoup
 from PIL import Image
+from typing import List
 from search_engine_parser import GoogleSearch
 
 import bs4
