@@ -416,7 +416,7 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*Terms and Conditions*"
+            text=f"*『 Terms and Conditions 』*"
             f"\nTo Use Kobo, You Need To Read Terms and Conditions Carefully."
             "\n\n✪ Watch your group, if someone spamming your group, you can use report feature from your Telegram Client."
             "\n✪ Make sure antiflood is enabled, so nobody can Flood/Spam your group."
