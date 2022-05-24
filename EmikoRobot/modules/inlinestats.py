@@ -23,10 +23,19 @@ async def bot_sys_stats():
     stats = f"""
 @KoboKanaeru_Robot
 ------------------
-UPTIME: {formatter.get_readable_time(bot_uptime)}
+PlatForm : Linux
+PlatForm - Release : 4.4.0-1101-aws
+PlatFork - Version : #106-Ubuntu SMP Tue Mar 1 10:51:49 UTC 2022
+Architecture : x86_64
+Hostname : aa5a53a6-d922-4d19-9c0e-dca30cb2e74d
+IP : 172.17.216.82
+Mac : 0a:89:7d:e1:ac:b3
+
 BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
 CPU: {cpu}%
 RAM: {mem}%
 DISK: {disk}%
+
+UPTIME: {formatter.get_readable_time(bot_uptime)}
 """
     return stats
