@@ -441,11 +441,11 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>*Kobo Is A Powerful Bot For Managing Groups With Additional Features.*</b>"
+            text=f"*Kobo Is A Powerful Bot For Managing Groups With Additional Features.*"
             f"\n\nFork of [SkyzuRobot](https://github.com/Skyzu/SkyzuRobot)."
             f"\n\nKobo's licensed under the GNU (_General Public License v3.0_)"
             f"\n\nIf Any Question About Kobo Kanaeru, Let Us Know At [Group Support](https://t.me/AkoUpdate).",
-            parse_mode=ParseMode.HTML,
+            parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_admin")]]
