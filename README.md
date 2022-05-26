@@ -21,6 +21,9 @@
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/sophiashirashaki/Kobo-Robot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
+### Deploy On Okteto
+[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/sophiashirashaki/Kobo-Robot)
+
 # Fork
 This repo is forked from KanataRobot
 
