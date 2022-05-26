@@ -426,7 +426,7 @@ def emiko_about_callback(update, context):
             "\n✪ Sharing any files/videos others than about bot in Support Chat is prohibited."
             "\n✪ Sharing NSFW in Support Chat,will reward you GBAN and reported to Telegram as well."
             "\n\nFor any kind of help, related to this bot, Join [Group Support](https://t.me/AkoUpdate)."
-            "\n\n_Terms & Conditions will be changed anytime.",
+            "\n\n_Terms & Conditions will be changed anytime._",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
