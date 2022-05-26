@@ -6,6 +6,7 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton, ParseMode, Upda
 from telegram.ext import CallbackContext, run_async
 
 from EmikoRobot import StartTime, dispatcher
+from EmikoRobot.modules.inlinestats import bot_sys_stats
 from EmikoRobot.modules.helper_funcs.chat_status import sudo_plus
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 
