@@ -2,7 +2,7 @@ import time
 from typing import List
 
 import requests
-from telegram import ParseMode, Update
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton, ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
 from EmikoRobot import StartTime, dispatcher
@@ -83,6 +83,8 @@ def ping(update: Update, context: CallbackContext):
         "<b>Time Taken:</b> <code>{}</code>\n"
         "<b>Service Uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="", callback_data="")]]
     )
 
 
