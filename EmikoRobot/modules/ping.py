@@ -84,7 +84,7 @@ def ping(update: Update, context: CallbackContext):
         "<b>Service Uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="", callback_data="")]]
+            [[InlineKeyboardButton(text="System Stats 🖥", callback_data="stats_callback")]]
     )
 
 
