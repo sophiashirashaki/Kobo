@@ -10,7 +10,7 @@ from telegram.helpers import escape_markdown
 
 
 from EmikoRobot import StartTime
-from EmikoRobot.__main__ import STATS
+from EmikoRobot.__main__ import STATS, dispatcher
 from EmikoRobot.modules.sql import SESSION
 from EmikoRobot.modules.helper_funcs.chat_status import sudo_plus
 from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
@@ -118,8 +118,8 @@ async def pingCallback(update: Update, context: CallbackContext):
     await query.answer(f'Pong! {ping_time}ms')
 
 
-CUTIEPII_PTB.add_handler(CommandHandler("statistics", stats))
-CUTIEPII_PTB.add_handler(CallbackQueryHandler(pingCallback, pattern=r"pingCB"))
+dispatcher.add_handler(CommandHandler("statistics", stats))
+dispatcher.add_handler(CallbackQueryHandler(pingCallback, pattern=r"pingCB"))
 
 
 __mod_name__ = "statistics"
