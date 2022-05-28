@@ -9,8 +9,8 @@ from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 from telegram.helpers import escape_markdown
 
 
-from EmikoRobot import StartTime
-from EmikoRobot.__main__ import STATS, dispatcher
+from EmikoRobot import StartTime, dispatcher
+from EmikoRobot.__main__ import STATS
 from EmikoRobot.modules.sql import SESSION
 from EmikoRobot.modules.helper_funcs.chat_status import sudo_plus
 from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
@@ -49,12 +49,12 @@ async def stats(update: Update, context: CallbackContext):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
     status = "*╔═━「 Kobo Statistics: 」*\n\n"
-    status += f"*➛ System Start time:* {str(uptime)}" + "\n"
+    status += f"*➛ System Start time:* {str(uptime)}" + "\n\n"
     uname = platform.uname()
     status += f"*➛ System:* {str(uname.system)}" + "\n"
     status += f"*➛ Node name:* {escape_markdown(str(uname.node))}" + "\n"
     status += f"*➛ Release:* {escape_markdown(str(uname.release))}" + "\n"
-    status += f"*➛ Machine:* {escape_markdown(str(uname.machine))}" + "\n"
+    status += f"*➛ Machine:* {escape_markdown(str(uname.machine))}" + "\n\n"
 
     mem = virtual_memory()
     cpu = cpu_percent()
