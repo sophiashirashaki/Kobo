@@ -568,7 +568,8 @@ Examples:
  
 *Overall Information about you:*
 ❂ /info*:* get information about a user. 
- 
+❂ /myinfo*:* get information about a user in inline.
+
 *json Detailed info:*
 ❂ /json*:* Get Detailed info about any message.
  
