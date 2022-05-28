@@ -18,7 +18,6 @@ ffmpeg-python
 spongemock
 zalgo-text
 geopy
-humanize
 nltk
 psutil
 aiohttp
@@ -46,9 +45,10 @@ pygithub
 TgCrypto
 pyrogram==1.4.16
 PyDictionary
-youtube-search
-youtube-search-python
-lyricsgenius
+git+https://github.com/Sorrybabe/downloader
+youtube_search_python==1.4.9
+youtube_search
+lyrics_extractor
 asyncio
 cloudscraper
 dateparser
