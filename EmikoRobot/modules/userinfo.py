@@ -454,10 +454,11 @@ def stats(update: Update, context: CallbackContext):
         result,
         parse_mode=ParseMode.HTML, 
         disable_web_page_preview=True
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="System Stats 🖥", callback_data="stats_callback")]]
-            ),
-        )     
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="System Stats 🖥", callback_data="stats_callback")]]
+         ),
+     )     
+
 @app.on_callback_query(filters.regex("stats_callback"))
 async def stats_callbacc(_, CallbackQuery):
     text = await bot_sys_stats()
@@ -585,7 +586,7 @@ When marked as AFK, any mentions will be replied to with a message stating that 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
 GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, run_async=True)
 
-STATS_HANDLER = CommandHandler(["stats"], stats, run_async=True)
+STATS_HANDLER = CommandHandler("stats", stats, run_async=True)
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, run_async=True)
 GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid, run_async=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, run_async=True)
