@@ -5,8 +5,8 @@ wget
 gtts
 beautifulsoup4
 requests
-python-telegram-bot==13.12
-SQLAlchemy==1.4.34
+python-telegram-bot==13.11
+SQLAlchemy==1.4.36
 psycopg2-binary
 feedparser
 faker
@@ -43,10 +43,10 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-pyrogram==1.4.12
+pyrogram==1.4.16
 PyDictionary
 git+https://github.com/Sorrybabe/downloader
-youtube_search_python==1.6.3
+youtube_search_python==1.4.9
 youtube_search
 lyrics_extractor
 asyncio
@@ -61,7 +61,6 @@ countryinfo
 html2text
 bs4
 redis
-hiredis
 pySmartDL
 bing_image_downloader
 search_engine_parser
@@ -86,4 +85,3 @@ fuzzysearch
 img2pdf
 multicolorcaptcha
 git+https://github.com/python-telegram-bot/ptbcontrib.git
-SibylSystem
